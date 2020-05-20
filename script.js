@@ -32,12 +32,21 @@ function iniciarJogo(){
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
 
+    // Define os movimentos da cobrinha com base no plano cartesiano com eixos x e y
     if(direction == "right") snakeX += box;
     if(direction == "left") snakeX -= box;
     if(direction == "up") snakeY -= box;
     if(direction == "down") snakeY += box;
 
+    // Cria o movimento de engolir objetos eliminando da frente e jogando para o corpo da cobrinha
     snake.pop();
+
+    let newHead = {
+        x: snakeX,
+        y: snakeY
+    }
+
+    snake.unshift(newHead);
 }
 
 // Atualiza o frame do jogo a cada 100 milisegundos
