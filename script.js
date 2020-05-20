@@ -7,6 +7,9 @@ snake[0] = {
     y: 8 * box,   
 }
 
+let direction = "right";
+
+
 // Criar o background do jogo
 function criarBG(){
     context.fillStyle = "lightgreen";
@@ -14,13 +17,21 @@ function criarBG(){
 }
 
 // Criar o corpo da cobrinha
-function cirarCobrinha(){
+function criarCobrinha(){
     for(i = 0; i < snake.length; i++){
         context.fillStyle = "green";
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
 }
 
+// Criar movimento da cobrinha
+function iniciarJogo(){
+    criarBG();
+    criarCobrinha();
 
-criarBG();
-cirarCobrinha();
+    let snakeX = snake[0].x;
+    let snakeY = snake[0].y;
+}
+
+// Atualiza o frame do jogo a cada 100 milisegundos
+let jogo = setInterval(iniciarJogo, 100);
