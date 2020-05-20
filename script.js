@@ -31,6 +31,13 @@ function iniciarJogo(){
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
+
+    if(direction == "right") snakeX += box;
+    if(direction == "left") snakeX -= box;
+    if(direction == "up") snakeY -= box;
+    if(direction == "down") snakeY += box;
+
+    snake.pop();
 }
 
 // Atualiza o frame do jogo a cada 100 milisegundos
