@@ -6,4 +6,6 @@ Projeto realizado como atividade extracurricular do Bootcamp <b>Global Full-Stac
 
 <b>Tecnologias utilizadas</b>: HTML, CSS e JavaScript
 
+<b>Ferramenta utilizada</b>: Visual Studio Code
+
 <b>Início do Desenvolvimento</b>: 20/05/2020
